@@ -9,24 +9,22 @@ const Mood = (props) => {
             <div className="col-sm-8 col-lg-8 col-lg-md-8 mx-auto">
                 <div className="card p-lg-3">
                     <div className="card-body">
-                        <h5 className="card-title pb-3">Over the last two weeks have you been feeling
-                            down,depressed, irritable, or hopeless?</h5>
+                        <h5 className="card-title pb-3">{props.qn}</h5>
                         <div className="card-text d-flex labels">
                             <label className="form-control">
-                                <input type="radio" name={props.qnName} value="Not at all" />Not at all
+                                <input type="radio" name={props.qnName} value="Not at all" />Yes
                             </label>
 
                             <label className="form-control">
-                                <input type="radio" name={props.qnName} value="Several Days" />Several Days
+                                <input type="radio" name={props.qnName} value="Several Days" />No
                             </label>
 
                             <label className="form-control">
-                                <input type="radio" name={props.qnName} value="More than half the days" />More than half
-                                the days
+                                <input type="radio" name={props.qnName} value="More than half the days" />May be
                             </label>
 
                             <label className="form-control">
-                                <input type="radio" name={props.qnName} value="Nearly every day" />Nearly every day
+                                <input type="radio" name={props.qnName} value="Nearly every day" />Not sure
                             </label>
                         </div>
                     </div>
@@ -49,16 +47,46 @@ const Comp = () => {
 
                 <form id="formid">
                     <div className="row d-grid gap-lg-5">
-                        <Mood name="Qn-1" />
-                        <Mood name="Qn-2" />
-                        <Mood name="Qn-3" />
-                        <Mood name="Qn-4" />
-                        <Mood name="Qn-5" />
-                        <Mood name="Qn-6" />
-                        <Mood name="Qn-7" />
-                        <Mood name="Qn-8" />
-                        <Mood name="Qn-9" />
-                        <Mood name="Qn-10" />
+                        <Mood
+                            name="Qn-1"
+                            qn="Felt great this morning?"
+                        />
+                        <Mood
+                            name="Qn-2"
+                            qn="Feeling persistent, sad, anxious or empty mood ?"
+                        />
+                        <Mood
+                            name="Qn-3"
+                            qn="Had a loss of appetite and weight loss -or- incread appetite and weight gain ?"
+                        />
+                        <Mood
+                            name="Qn-4"
+                            qn="Loss of interest in activities you enjoyed?"
+                        />
+                        <Mood
+                            name="Qn-5"
+                            qn="Being sleepy too little or sleeping too much?"
+                        />
+                        <Mood
+                            name="Qn-6"
+                            qn="Too much bothered by feeling down, depressed, irritable, or hopeless?"
+                        />
+                        <Mood
+                            name="Qn-7"
+                            qn="Feeling bad about yourself – or feeling that you are a failure, or that you have let yourself or your family down?"
+                        />
+                        <Mood
+                            name="Qn-8"
+                            qn="Have you been moving or speaking so slowly that other people could have noticed? Or the opposite – being so fidgety or restless that you were moving around a lot more than usual?"
+                        />
+                        <Mood
+                            name="Qn-9"
+                            qn="Had thoughts that you would be better off dead, or of hurting yourself in some way?"
+                        />
+                        <Mood
+                            name="Qn-10"
+                            qn="Do you wish to take a therapy session?"
+                        />
                     </div>
                 </form>
 
