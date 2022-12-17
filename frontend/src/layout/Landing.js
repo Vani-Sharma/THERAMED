@@ -26,7 +26,7 @@ const Landing = () => {
                         <div className="col-xl-3 col-md-6" data-aos="fade-down" data-aos-delay="100">
                             <div className="icon-box">
                                 <div className="icon"><i className="bi bi-easel"></i></div>
-                                <h4 className="title"><a href="SignUP and Login/signUp_patient.html" className="stretched-link">Video chat</a>
+                                <h4 className="title"><a href="/" className="stretched-link">Video chat</a>
                                 </h4>
                             </div>
                         </div>
@@ -35,7 +35,7 @@ const Landing = () => {
                         <div className="col-xl-3 col-md-6" data-aos="fade-down" data-aos-delay="200">
                             <div className="icon-box">
                                 <div className="icon"><i className="bi bi-gem"></i></div>
-                                <h4 className="title"><a href="SignUP and Login/signUp_patient.html" className="stretched-link">Earn some reward
+                                <h4 className="title"><a href="/" className="stretched-link">Earn some reward
                                     points</a></h4>
                             </div>
                         </div>
@@ -44,7 +44,7 @@ const Landing = () => {
                         <div className="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
                             <div className="icon-box">
                                 <div className="icon"><i className="bi bi-geo-alt"></i></div>
-                                <h4 className="title"><a href="SignUP and Login/signUp_patient.html" className="stretched-link"> Chat with
+                                <h4 className="title"><a href="/" className="stretched-link"> Chat with
                                     therapist </a></h4>
                             </div>
                         </div>
@@ -53,7 +53,7 @@ const Landing = () => {
                         <div className="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
                             <div className="icon-box">
                                 <div className="icon"><i className="bi bi-command"></i></div>
-                                <h4 className="title"><a href="SignUP and Login/signUp_patient.html" className="stretched-link">Book a session</a>
+                                <h4 className="title"><a href="/" className="stretched-link">Book a session</a>
                                 </h4>
                             </div>
                         </div>

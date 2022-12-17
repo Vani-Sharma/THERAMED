@@ -17,12 +17,6 @@ const MoodStart = () => {
                         <div className="stats-item d-flex align-items-center">
                             <h2>Feeling Low ? <span style={{ marginTop: '3%' }}>Avail mood tracking service and earn rewards</span> </h2>
                         </div>
-
-
-                        <div className="stats-item d-flex align-items-center">
-                            <li><Link to='/mood-tracking' className="links">Your Therapist</Link></li>
-                        </div>
-
                     </div>
 
                 </div>

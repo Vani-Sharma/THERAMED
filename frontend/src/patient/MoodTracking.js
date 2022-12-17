@@ -3,12 +3,6 @@ import Navbar from './Navbar'
 import Footer from '../layout/Footer'
 import Landing from '../layout/Landing'
 
-
-function AvgMood() {
-    return 0;
-}
-
-
 const Mood = (props) => {
     return (
         <>
@@ -18,19 +12,19 @@ const Mood = (props) => {
                         <h5 className="card-title pb-3">{props.qn}</h5>
                         <div className="card-text d-flex labels">
                             <label className="form-control">
-                                <input type="radio" name={props.qnName} value="Not at all" />Yes
+                                <input type="radio" name={props.name} value="1" />Yes
                             </label>
 
                             <label className="form-control">
-                                <input type="radio" name={props.qnName} value="Several Days" />No
+                                <input type="radio" name={props.name} value="2" />No
                             </label>
 
                             <label className="form-control">
-                                <input type="radio" name={props.qnName} value="More than half the days" />May be
+                                <input type="radio" name={props.name} value="3" />May be
                             </label>
 
                             <label className="form-control">
-                                <input type="radio" name={props.qnName} value="Nearly every day" />Not sure
+                                <input type="radio" name={props.name} value="4" />Not sure
                             </label>
                         </div>
                     </div>
@@ -39,6 +33,7 @@ const Mood = (props) => {
         </>
     )
 }
+
 
 const Comp = () => {
     return (
@@ -96,7 +91,7 @@ const Comp = () => {
                     </div>
                 </form>
 
-                <button type='submit' onSubmit={AvgMood()}>Submit</button>
+                <button type='submit'>Submit</button>
 
             </section>
         </>
