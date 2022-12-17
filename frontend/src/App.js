@@ -31,14 +31,14 @@ function App() {
         <Blog />
         <Footer />
       </> : <Register />} />
-      <Route exact path="/register-patient" element={user ? <Register /> : <Patient />} />
+      <Route exact path="/register-patient" element={!user ? <Register /> : <Patient />} />
       <Route exact path="/login-patient" element={!user ? <Login /> : <Patient />} />
       <Route exact path="/patient" element={<Patient />} />
       <Route exact path="/mood-tracking" element={<MoodTracking />} />
       <Route exact path="/therapistsdb" element={<TherapistDB />} />
       <Route exact path="/therapist" element={<Therapist />} />
       <Route exact path="/patientinfo" element={<Your_Patients />} />
-      <Route exact path="/register-therapist" element={!user ? <Register_Therapist /> : <Therapist />} />
+      <Route exact path="/register-therapist" element={user ? <Register_Therapist /> : <Therapist />} />
       <Route exact path="/login-therapist" element={!user ? <Login_Therapist /> : <Therapist />} />
     </Routes>
   );

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 const Navbar = () => {
     return (
         <header id="header" className="header d-flex align-items-center">
@@ -13,7 +14,7 @@ const Navbar = () => {
                 <nav id="navbar" className="navbar">
                     <ul>
                         <li><Link to='/' className="links">Home</Link></li>
-                        <li><Link to='/patientinfo' className="links">Your Patient</Link></li>
+                        {/* <li><HashLink to='/patientinfo#portfolio' className="links">Your Patient</HashLink></li> */}
                         <li><Link to='/' className="links">My Profile</Link></li>
                         <li><Link to='/' className="links">LogOut</Link></li>
                     </ul>

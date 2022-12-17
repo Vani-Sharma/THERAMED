@@ -11,7 +11,7 @@ const Your_Therapist = () => {
                     </p>
                 </div>
 
-                <div className="row gy-4">
+                <div className="row .align-items-center .justify-content-centre">
 
                     <div className="col-xl-4 col-md-4 d-flex " data-aos="fade-up" data-aos-delay="200">
                         <div className="member featured">

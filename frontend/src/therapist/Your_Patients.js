@@ -1,6 +1,4 @@
 import React from 'react';
-import Navbar from "../layout/Home/Navbar";
-import Landing from "../layout/Landing";
 
 const PatientsInfo = (props) => {
     return (
@@ -13,7 +11,27 @@ const PatientsInfo = (props) => {
                     <div class="portfolio-info">
                         <h4><a href="/" title="More Details">{props.name}</a></h4>
 
-                        <div class="accordion-item">
+                        <div class="btn-group dropup">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                Know More
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li className="dropdown-item">Phone : 9458695028</li>
+                                <li className="dropdown-item">Email : {props.email}</li>
+                                <li className="dropdown-item">Mood-Tracking Info : <p>Mood today is happy </p> </li>
+                                <li>
+                                    <form>
+                                        Session taken succesfully? <input type="checkbox" /> <br />
+                                        Task completed by patient? <input type="checkbox" />
+
+                                        <button></button>
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                        {/* <div class="accordion-item">
                             <h3 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target='#patient-1'>
                                     Know More
@@ -34,8 +52,8 @@ const PatientsInfo = (props) => {
                                         Assumenda dolorem repellat minus voluptas necessitatibus, aut aperiam?
                                     </p>
                                 </div>
-                            </div>
-                        </div>
+                            </div> 
+                    </div>*/}
                     </div>
                 </div>
 
@@ -118,8 +136,6 @@ const Comp = () => {
 const Your_Patients = () => {
     return (
         <>
-            <Navbar />
-            <Landing />
             <Comp />
         </>
     )
