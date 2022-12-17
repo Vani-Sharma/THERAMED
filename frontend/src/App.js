@@ -31,7 +31,7 @@ function App() {
         <Blog />
         <Footer />
       </> : <Register />} />
-      <Route exact path="/register-patient" element={!user ? <Register /> : <Patient />} />
+      <Route exact path="/register-patient" element={user ? <Register /> : <Patient />} />
       <Route exact path="/login-patient" element={!user ? <Login /> : <Patient />} />
       <Route exact path="/patient" element={<Patient />} />
       <Route exact path="/mood-tracking" element={<MoodTracking />} />

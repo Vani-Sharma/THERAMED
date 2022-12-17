@@ -17,7 +17,6 @@ const All_Therapist = () => {
                         <div className="member">
                             <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="" />
                             <h4>Walter White</h4>
-                            <span>Web Development</span>
                             <a href="/">Know more</a>
                         </div>
                     </div>
@@ -26,7 +25,6 @@ const All_Therapist = () => {
                         <div className="member featured">
                             <img src="assets/img/team/team-2.jpg" className="img-fluid" alt="" />
                             <h4>Sarah Jhinson</h4>
-                            <span>Marketing</span>
                             <a href="/">Know more</a>
                         </div>
                     </div>
@@ -35,7 +33,6 @@ const All_Therapist = () => {
                         <div className="member">
                             <img src="assets/img/team/team-3.jpg" className="img-fluid" alt="" />
                             <h4>William Anderson</h4>
-                            <span>Content</span>
                             <a href="/">Know more</a>
                         </div>
                     </div>

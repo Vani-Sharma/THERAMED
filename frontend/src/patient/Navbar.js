@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import Reward from "./Reward";
 const Navbar = () => {
     return (
         <header id="header" className="header d-flex align-items-center">
@@ -15,7 +16,9 @@ const Navbar = () => {
                         <li><Link to='/patient' className="links">Home</Link></li>
                         <li><Link to='/patient' className="links">Your Therapist</Link></li>
                         <li><Link to='/therapistsdb' className="links">Find a Therapist</Link></li>
-                        <li><Link to='/' className="links">My Points</Link></li>
+                        <li><button
+                            style={{ border: 'none', background: 'none' }}
+                            data-toggle="modal" data-target="#exampleModal" className="links">Your Points<Reward /></button></li>
                         <li><Link to='/' className="links">FAQ</Link></li>
                         <li><Link to='/' className="links">Blog</Link></li>
                         <li><Link to='/' className="links">My Profile</Link></li>

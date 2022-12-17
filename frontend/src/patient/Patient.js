@@ -18,7 +18,7 @@ function Patient() {
                         <Navbar />
                         <Landing />
                         <MoodStart />
-                        <Your_Therapist />
+                        {/* <Your_Therapist /> */}
                         <Faq />
                         <Blog />
                         <Footer />

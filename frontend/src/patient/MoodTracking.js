@@ -3,6 +3,12 @@ import Navbar from './Navbar'
 import Footer from '../layout/Footer'
 import Landing from '../layout/Landing'
 
+
+function AvgMood() {
+    return 0;
+}
+
+
 const Mood = (props) => {
     return (
         <>
@@ -89,6 +95,8 @@ const Comp = () => {
                         />
                     </div>
                 </form>
+
+                <button type='submit' onSubmit={AvgMood()}>Submit</button>
 
             </section>
         </>
