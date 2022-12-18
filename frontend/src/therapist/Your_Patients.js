@@ -1,5 +1,11 @@
 import React from 'react';
+const styles = {
+    lidropdown: {
+        margin: '1.5rem',
+        cursor: 'pointer',
 
+    }
+}
 const PatientsInfo = (props) => {
     return (
         <>
@@ -15,16 +21,16 @@ const PatientsInfo = (props) => {
                             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                 Know More
                             </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <li className="dropdown-item">Phone : 9458695028</li>
-                                <li className="dropdown-item">Email : {props.email}</li>
-                                <li className="dropdown-item">Mood-Tracking Info : <p>Mood today is happy </p> </li>
-                                <li>
+                            <ul class="dropdown-menu" style={{ width: '23rem' }} aria-labelledby="dropdownMenuButton1">
+                                <li style={styles.lidropdown}>Phone : 9458695028</li>
+                                <li style={styles.lidropdown}>Email : {props.email}</li>
+                                <li style={styles.lidropdown}>Mood-Tracking Info : <span>Mood today is happy </span> </li>
+                                <li style={styles.lidropdown}>
                                     <form>
                                         Session taken succesfully? <input type="checkbox" /> <br />
-                                        Task completed by patient? <input type="checkbox" />
+                                        Task completed by patient? <input type="checkbox" /><br />
 
-                                        <button></button>
+                                        <button>Submit</button>
                                     </form>
                                 </li>
                             </ul>

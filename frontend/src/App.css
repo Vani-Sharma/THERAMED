@@ -1872,3 +1872,7 @@ input[type="radio"]:checked::before {
 .footer .credits a {
   color: #fff;
 }
+
+.lidropdown {
+  border: 2px solid black;
+}

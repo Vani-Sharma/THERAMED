@@ -14,14 +14,14 @@ const Navbar = () => {
                 <nav id="navbar" className="navbar">
                     <ul>
                         <li><Link to='/patient' className="links">Home</Link></li>
-                        <li><Link to='/patient' className="links">Your Therapist</Link></li>
+                        <li><a href="#team" className="links">Your Therapist</a></li>
                         <li><Link to='/therapistsdb' className="links">Find a Therapist</Link></li>
                         <li><button
                             style={{ border: 'none', background: 'none' }}
                             data-toggle="modal" data-target="#exampleModal" className="links">Your Points<Reward /></button></li>
-                        <li><Link to='/' className="links">FAQ</Link></li>
-                        <li><Link to='/' className="links">Blog</Link></li>
-                        <li><Link to='/' className="links">My Profile</Link></li>
+                        <li><a href="#faq" className="links">FAQ</a></li>
+                        <li><a href="#recent-posts" className="links">Blog</a></li>
+                        <li><Link to='/mood-tracking' className="links">Mood Tracking Quiz</Link></li>
                         <li><Link to='/login' className="links">LogOut</Link></li>
                     </ul>
 
