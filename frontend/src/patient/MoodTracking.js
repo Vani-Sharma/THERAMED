@@ -4,6 +4,9 @@ import Footer from '../layout/Footer'
 import Landing from '../layout/Landing'
 
 const Mood = (props) => {
+    const handleChange=(e)=>{
+        console.log(e)
+    }
     return (
         <>
             <div className="col-sm-8 col-lg-8 col-lg-md-8 mx-auto">
@@ -11,7 +14,7 @@ const Mood = (props) => {
                     <div className="card-body">
                         <h5 className="card-title pb-3">{props.qn}</h5>
                         <div className="card-text d-flex labels">
-                            <label className="form-control">
+                            {/* <label className="form-control">
                                 <input type="radio" name={props.name} value="1" />Yes
                             </label>
 
@@ -25,7 +28,14 @@ const Mood = (props) => {
 
                             <label className="form-control">
                                 <input type="radio" name={props.name} value="4" />Not sure
-                            </label>
+                            </label> */}
+                            <select name="ques" i         
+                            onChange={handleChange}>
+  <option value="1">Yes</option>
+  <option value="2">No</option>
+  <option value="3">May be</option>
+  <option value="4">Not sure</option>
+</select>
                         </div>
                     </div>
                 </div>
