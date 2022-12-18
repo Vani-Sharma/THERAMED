@@ -1,64 +1,64 @@
-import { Link ,useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const Login = () => {
-    const [Userdata,setUserdata ] = React.useState({ fname: '',lname : '',email : '' });
+    const [Userdata, setUserdata] = React.useState({ fname: '', lname: '', email: '' });
 
     const navigate = useNavigate();
-const[message ,setMessage]=useState("");
-const[warning ,setwarning]=useState(false);
+    const [message, setMessage] = useState("");
+    const [warning, setwarning] = useState(false);
 
-const handleSubmit = async (e) => {
-      e.preventDefault();
-  
-
- const tobeSaved= {
- 
-         password:Userdata.password,
-         email:Userdata.email
-
-     
-  }
-  console.log(tobeSaved)
- 
-
-  axios.post(`http://localhost:8080/api/PatientLogin`, tobeSaved)
-  .then((response) => {
-    console.log(response);
-
-    // console.log(response.Customer);
-const type={
-  type:"patient"
-}
-const tobestored=[];
-tobestored.push(response.data);
-tobestored.push(type);
-tobestored.push(Userdata.email)
-if (response.data.Patient) {
-  localStorage.setItem('token', JSON.stringify( tobestored))
-  const token=localStorage.getItem('token')
+    const handleSubmit = async (e) => {
+        e.preventDefault();
 
 
-  console.log('Login successful')
-  // window.location.href = '/dashboard'
-  navigate('/');
-} 
-else  if (response.status="error"){
-console.log(response.data.Customer)
-setwarning(true)
- setMessage("Please check your username and password")
+        const tobeSaved = {
 
-}
-
-  })
-  .catch((error) => {
-    console.log(error);
-  })
-  console.log("sent")
+            password: Userdata.password,
+            email: Userdata.email
 
 
-}
+        }
+        console.log(tobeSaved)
+
+
+        axios.post(`http://localhost:8080/api/PatientLogin`, tobeSaved)
+            .then((response) => {
+                console.log(response);
+
+                // console.log(response.Customer);
+                const type = {
+                    type: "patient"
+                }
+                const tobestored = [];
+                tobestored.push(response.data);
+                tobestored.push(type);
+                tobestored.push(Userdata.email)
+                if (response.data.Patient) {
+                    localStorage.setItem('token', JSON.stringify(tobestored))
+                    const token = localStorage.getItem('token')
+
+
+                    console.log('Login successful')
+                    // window.location.href = '/dashboard'
+                    navigate('/');
+                }
+                else if (response.status = "error") {
+                    console.log(response.data.Customer)
+                    setwarning(true)
+                    setMessage("Please check your username and password")
+
+                }
+
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+        console.log("sent")
+
+
+    }
     return (
         <section class="vh-100" style={{ backgroundColor: '#eee' }}>
             <div class="container h-100">
@@ -69,7 +69,7 @@ setwarning(true)
                                 <div class="row justify-content-center">
                                     <div class="col-md-10 col-lg-6 col-xl-6 order-2 order-lg-1">
 
-                                        <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
+                                        <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Welcome User! Login to your account</p>
 
                                         <form class="mx-1 mx-md-4" onSubmit={handleSubmit}>
 
@@ -78,7 +78,7 @@ setwarning(true)
                                                     <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                                                 </label>
                                                 <div class="form-outline flex-fill mb-0">
-                                                    <input type="text" name='name' id="name" class="form-control" placeholder='Your Name' onChange={(e) => setUserdata({ ...Userdata,name : e.target.value })}/>
+                                                    <input type="text" name='name' id="name" class="form-control" placeholder='Your Name' onChange={(e) => setUserdata({ ...Userdata, name: e.target.value })} />
                                                 </div>
                                             </div>
 
@@ -87,7 +87,7 @@ setwarning(true)
                                                     <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                                                 </label>
                                                 <div class="form-outline flex-fill mb-0">
-                                                    <input type="email" name='email' id="email" class="form-control" placeholder='Your Email' onChange={(e) => setUserdata({ ...Userdata,email : e.target.value })}/>
+                                                    <input type="email" name='email' id="email" class="form-control" placeholder='Your Email' onChange={(e) => setUserdata({ ...Userdata, email: e.target.value })} />
                                                 </div>
                                             </div>
 
@@ -96,7 +96,7 @@ setwarning(true)
                                                     <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                                                 </label>
                                                 <div class="form-outline flex-fill mb-0">
-                                                    <input type="password" name="password" id="password" class="form-control" placeholder='Password' onChange={(e) => setUserdata({ ...Userdata,password : e.target.value })} />
+                                                    <input type="password" name="password" id="password" class="form-control" placeholder='Password' onChange={(e) => setUserdata({ ...Userdata, password: e.target.value })} />
                                                 </div>
                                             </div>
 
@@ -143,7 +143,7 @@ setwarning(true)
                                         </form>
                                         <div>
                                             <ul style={{ listStyle: 'none', hover: { color: 'transparent' }, fontSize: '1.5rem', fontStyle: 'italic' }}>
-                                                <li><Link to='/register-therapist' className="links">SignUp as Therapist</Link></li>
+                                                <li><Link to='/login-therapist' className="links">Login as Therapist</Link></li>
                                             </ul>
                                         </div>
 

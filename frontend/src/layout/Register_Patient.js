@@ -1,58 +1,58 @@
-import { Link ,useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 const Register = () => {
-    
-        const [Userdata,setUserdata ] = React.useState({ fname: '',lname : '',email : '' });
 
-          const navigate = useNavigate();
+    const [Userdata, setUserdata] = React.useState({ fname: '', lname: '', email: '' });
 
-      
-      const handleSubmit = async (e) => {
-            e.preventDefault();
-      
-            if(Userdata.password.length<8){
-      
-             alert("password must be greater than 8")
+    const navigate = useNavigate();
+
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        if (Userdata.password.length < 8) {
+
+            alert("password must be greater than 8")
         }
-        else if(!Boolean(Userdata.password.match(/[A-Z]/))){
-          alert("MUST INCLUDE AN UPPERCASE LETTER")
-        }  
-        else if(!Boolean(Userdata.password.match(/[a-z]/))){
-          alert("MUST INCLUDE AN LOWERCASE LETTER")
-        } 
-        else if(!Boolean(Userdata.password.match(/[0-9]/))){
-          alert("MUST INCLUDE AN NUMBER")
+        else if (!Boolean(Userdata.password.match(/[A-Z]/))) {
+            alert("MUST INCLUDE AN UPPERCASE LETTER")
         }
-        else if(!Boolean(Userdata.email.endsWith("com"))){
-          alert("PLEASE ENTER VALID EMAIL")
+        else if (!Boolean(Userdata.password.match(/[a-z]/))) {
+            alert("MUST INCLUDE AN LOWERCASE LETTER")
         }
-        else{
-          const tobeSaved= {
-                name:Userdata.name,
-                  password:Userdata.password,
-                  email:Userdata.email,
-         
-              
-           }
-      
-          console.log(tobeSaved)
-          
-       
-          axios.post(`http://localhost:8080/api/PatientRegister`, tobeSaved)
-          .then((response) => {
-            console.log(response);
-            
-            // Handle data
-          })
-          .catch((error) => {
-            console.log(error.mesage);
-          })
-          alert("successful")
-          navigate('/login-patient');
+        else if (!Boolean(Userdata.password.match(/[0-9]/))) {
+            alert("MUST INCLUDE AN NUMBER")
         }
-      
-      }
+        else if (!Boolean(Userdata.email.endsWith("com"))) {
+            alert("PLEASE ENTER VALID EMAIL")
+        }
+        else {
+            const tobeSaved = {
+                name: Userdata.name,
+                password: Userdata.password,
+                email: Userdata.email,
+
+
+            }
+
+            console.log(tobeSaved)
+
+
+            axios.post(`http://localhost:8080/api/PatientRegister`, tobeSaved)
+                .then((response) => {
+                    console.log(response);
+
+                    // Handle data
+                })
+                .catch((error) => {
+                    console.log(error.mesage);
+                })
+            alert("successful")
+            navigate('/login-patient');
+        }
+
+    }
 
     return (
         <section class="vh-100" style={{ backgroundColor: '#eee' }}>
@@ -64,7 +64,7 @@ const Register = () => {
                                 <div class="row justify-content-center">
                                     <div class="col-md-10 col-lg-6 col-xl-6 order-2 order-lg-1">
 
-                                        <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
+                                        <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Welcome User! SignUp to your account</p>
 
                                         <form class="mx-1 mx-md-4" onSubmit={handleSubmit}>
 
@@ -73,7 +73,7 @@ const Register = () => {
                                                     <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                                                 </label>
                                                 <div class="form-outline flex-fill mb-0">
-                                                    <input type="text" name='name' id="name" class="form-control" placeholder='Your Name' onChange={(e) => setUserdata({ ...Userdata,name : e.target.value })}/>
+                                                    <input type="text" name='name' id="name" class="form-control" placeholder='Your Name' onChange={(e) => setUserdata({ ...Userdata, name: e.target.value })} />
                                                 </div>
                                             </div>
 
@@ -82,7 +82,7 @@ const Register = () => {
                                                     <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                                                 </label>
                                                 <div class="form-outline flex-fill mb-0">
-                                                    <input type="email" name='email' id="email" class="form-control" placeholder='Your Email' onChange={(e) => setUserdata({ ...Userdata,email : e.target.value })}/>
+                                                    <input type="email" name='email' id="email" class="form-control" placeholder='Your Email' onChange={(e) => setUserdata({ ...Userdata, email: e.target.value })} />
                                                 </div>
                                             </div>
 
@@ -91,7 +91,7 @@ const Register = () => {
                                                     <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                                                 </label>
                                                 <div class="form-outline flex-fill mb-0">
-                                                    <input type="password" name="password" id="password" class="form-control" placeholder='Password' onChange={(e) => setUserdata({ ...Userdata,password : e.target.value })} />
+                                                    <input type="password" name="password" id="password" class="form-control" placeholder='Password' onChange={(e) => setUserdata({ ...Userdata, password: e.target.value })} />
                                                 </div>
                                             </div>
 

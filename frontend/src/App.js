@@ -9,8 +9,8 @@ import Faq from './layout/Home/Faq';
 import Blog from './layout/Home/Blogs';
 import Footer from './layout/Footer';
 import Patient from './patient/Patient';
-import Register from './layout/Register_Patient';
-import Login from './layout/Login_Patient';
+import Register_Patient from './layout/Register_Patient';
+import Login_Patient from './layout/Login_Patient';
 import MoodTracking from './patient/MoodTracking';
 import TherapistDB from './patient/TherapistDB';
 import Therapist from './therapist/Therapist';
@@ -30,16 +30,16 @@ function App() {
         <Faq />
         <Blog />
         <Footer />
-      </> : <Register />} />
-      <Route exact path="/register-patient" element={!user ? <Register /> : <Patient />} />
-      <Route exact path="/login-patient" element={!user ? <Login /> : <Patient />} />
+      </> : <Register_Patient />} />
+      <Route exact path="/register-patient" element={!user ? <Register_Patient /> : <Login_Patient />} />
+      <Route exact path="/login-patient" element={user ? <Login_Patient /> : <Patient />} />
       <Route exact path="/patient" element={<Patient />} />
       <Route exact path="/mood-tracking" element={<MoodTracking />} />
       <Route exact path="/therapistsdb" element={<TherapistDB />} />
       <Route exact path="/therapist" element={<Therapist />} />
       <Route exact path="/patientinfo" element={<Your_Patients />} />
-      <Route exact path="/register-therapist" element={user ? <Register_Therapist /> : <Therapist />} />
-      <Route exact path="/login-therapist" element={!user ? <Login_Therapist /> : <Therapist />} />
+      <Route exact path="/register-therapist" element={!user ? <Register_Therapist /> : <Login_Therapist />} />
+      <Route exact path="/login-therapist" element={user ? <Login_Therapist /> : <Therapist />} />
     </Routes>
   );
 }
