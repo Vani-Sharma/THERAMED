@@ -130,9 +130,7 @@ const Comp = () => {
 const TherapistDB = () => {
     return (
         <>
-            <Navbar />
             <Landing />
-            <Comp />
         </>
     )
 }

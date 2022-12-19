@@ -41,7 +41,6 @@ const Login = () => {
 
 
                     console.log('Login successful')
-                    // window.location.href = '/dashboard'
                     navigate('/');
                 }
                 else if (response.status = "error") {

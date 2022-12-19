@@ -112,11 +112,8 @@ const Comp = () => {
 const Mood_Tracking = () => {
     return (
         <>
-            <Navbar />
             <Landing />
             <Comp />
-            <Footer />
-
         </>
     )
 }

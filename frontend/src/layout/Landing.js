@@ -26,7 +26,7 @@ const Landing = () => {
                         <div className="col-xl-3 col-md-6" data-aos="fade-down" data-aos-delay="100">
                             <div className="icon-box">
                                 <div className="icon"><i className="bi bi-easel"></i></div>
-                                <h4 className="title"><a href="/" className="stretched-link">Video chat</a>
+                                <h4 className="title"><a href="/video-chat" className="stretched-link">Video chat</a>
                                 </h4>
                             </div>
                         </div>
@@ -41,10 +41,10 @@ const Landing = () => {
                         </div>
 
 
-                        <div className="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div className="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
                             <div className="icon-box">
                                 <div className="icon"><i className="bi bi-geo-alt"></i></div>
-                                <h4 className="title"><a href="/" className="stretched-link"> Chat with
+                                <h4 className="title"><a href="/chat" className="stretched-link"> Chat with
                                     therapist </a></h4>
                             </div>
                         </div>
