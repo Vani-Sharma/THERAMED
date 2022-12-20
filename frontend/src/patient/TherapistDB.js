@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../layout/Home/Navbar";
 import Landing from "../layout/Landing";
 
 const TherapistsInfo = (props) => {

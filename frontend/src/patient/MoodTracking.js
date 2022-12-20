@@ -1,6 +1,4 @@
 import React from 'react'
-import Navbar from './Navbar'
-import Footer from '../layout/Footer'
 import Landing from '../layout/Landing'
 
 const Mood = (props) => {

@@ -12,7 +12,7 @@ import Your_Patients from './therapist/Your_Patients';
 import Login_Therapist from './layout/Login_Therapist';
 import Register_Therapist from './layout/Register_Therapist';
 import Chat from './layout/Chat';
-import VideoChat from './layout/Video_Chat';
+import VideoChat from './layout/Video_Chat.jsx';
 import Home from './layout/Home';
 
 function App() {
