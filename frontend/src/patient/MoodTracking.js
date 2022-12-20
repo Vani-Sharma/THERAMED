@@ -1,6 +1,4 @@
 import React from 'react'
-import Navbar from './Navbar'
-import Footer from '../layout/Footer'
 import Landing from '../layout/Landing'
 
 const Mood = (props) => {
@@ -112,11 +110,8 @@ const Comp = () => {
 const Mood_Tracking = () => {
     return (
         <>
-            <Navbar />
             <Landing />
             <Comp />
-            <Footer />
-
         </>
     )
 }

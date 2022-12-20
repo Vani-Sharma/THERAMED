@@ -1,5 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 
 const Login = () => {
@@ -41,7 +41,6 @@ const Login = () => {
 
 
                     console.log('Login successful')
-                    // window.location.href = '/dashboard'
                     navigate('/');
                 }
                 else if (response.status = "error") {
